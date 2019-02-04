@@ -1,0 +1,17 @@
+<html>
+    <header>
+        <title>Welcome!</title>
+        <link rel="stylesheet" href="../styles/home_page.css">
+    </header>
+    <body>
+        <div class="container">
+            <h1 id="header">Hello, buddy!</h1>
+            <button id="logout-button" onclick="homePageController.logout()">Logout</button>
+        </div>
+    </body>
+
+    <script src="../controllers/HomePageController.js"></script>
+    <script>
+        let homePageController = new HomePageController();
+    </script>
+</html>
