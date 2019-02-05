@@ -1,10 +1,14 @@
-var path = require("path");
-var basePage = require("../pageobjects/BasePage");
-var loginPage = require("../pageobjects/LoginPage");
-var homePage = require("../pageobjects/HomePage");
+const path = require("path");
+const BasePage = require("../pageobjects/BasePage");
+const LoginPage = require("../pageobjects/LoginPage");
+const HomePage = require("../pageobjects/HomePage");
 
 describe("", function() {
     let EC = protractor.ExpectedConditions;
+
+    basePage = new BasePage();
+    loginPage = new LoginPage();
+    homePage = new HomePage();
 
     let pathToTheLoginPageFile = "../../../src/views/login_page.html",
         absolutePathToTheLoginFile = path.resolve(__dirname + pathToTheLoginPageFile);
