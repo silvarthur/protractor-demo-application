@@ -3,8 +3,9 @@ class HomePageController {
 
     logout() {
         setTimeout(() => {
-            location.href="file:///home/local/CONDUCTOR/arthur.antunes/Documentos/projects/example_application/src/views/login_page.html";
-            console.log("Bye bye!");
+            let pathToTheViewsFolder = location.pathname.split("/").slice(0,-1).join("/");
+
+            location.href="file://" + pathToTheViewsFolder + "/login_page.html";
         }, 2000);
     }
 }

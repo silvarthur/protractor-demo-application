@@ -1,3 +1,4 @@
+var path = require("path");
 var basePage = require("../pageobjects/BasePage");
 var loginPage = require("../pageobjects/LoginPage");
 var homePage = require("../pageobjects/HomePage");
@@ -5,12 +6,14 @@ var homePage = require("../pageobjects/HomePage");
 describe("", function() {
     let EC = protractor.ExpectedConditions;
 
+    let pathToTheLoginPageFile = "../../../src/views/login_page.html",
+        absolutePathToTheLoginFile = path.resolve(__dirname + pathToTheLoginPageFile);
+
     browser.ignoreSynchronization = true;
     browser.manage().timeouts().implicitlyWait(15000)
 
     beforeEach(async function() {
-        await browser.get("file:///home/local/CONDUCTOR/arthur.antunes/Documentos/projects/example_application/src/views/login_page.html");
-        //await browser.get("../../src/views/login_page.html");
+        await browser.get("file://" + absolutePathToTheLoginFile);
     });
 
     it("should login successfully", async function() {

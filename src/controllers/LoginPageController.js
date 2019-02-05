@@ -16,9 +16,11 @@ class LoginPageController {
         if(this._userEmail.value === "" || this._userPassword.value === "") {
             alert("Os campos de e-mail e senha devem estar preenchidos!")
         } else {
+
             setTimeout(() => {
-                location.href="file:///home/local/CONDUCTOR/arthur.antunes/Documentos/projects/example_application/src/views/home_page.html";
-                console.log("Welcome!")
+                let pathToTheViewsFolder = location.pathname.split("/").slice(0,-1).join("/");
+
+                location.href="file://" + pathToTheViewsFolder + "/home_page.html";
             }, 5000);
         }
     }
