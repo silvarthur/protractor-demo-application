@@ -16,7 +16,6 @@ class LoginPageController {
         if(this._userEmail.value === "" || this._userPassword.value === "") {
             alert("Os campos de e-mail e senha devem estar preenchidos!")
         } else {
-
             setTimeout(() => {
                 let pathToTheViewsFolder = location.pathname.split("/").slice(0,-1).join("/");
 
